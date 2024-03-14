@@ -13,18 +13,21 @@ function BookDetail() {
         return axios.put(`http://localhost:8000/api/update-inventory/${itemId}/`, newData);
     }
 
+    
+
+
     useEffect(() => {
+        const fetchProduct = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8000/api/inventory/${productId}/`);
+                setProduct(response.data);
+            } catch (error) {
+                console.error('Error fetching product:', error);
+            }
+        };
         fetchProduct();
     }, [productId]);
 
-    const fetchProduct = async () => {
-        try {
-            const response = await axios.get(`http://localhost:8000/api/inventory/${productId}/`);
-            setProduct(response.data);
-        } catch (error) {
-            console.error('Error fetching product:', error);
-        }
-    };
 
     const handleUpdate = async () => {
         try {
@@ -57,7 +60,7 @@ function BookDetail() {
         <div className="book-detail">
             <h1>{product.title}</h1>
             <p>
-                <img src={product.image_url} alt="Image" className="book-image" />
+                <img src={product.image_url} alt="Bonus" className="book-image" />
             </p>
             <p>
                 Title:
