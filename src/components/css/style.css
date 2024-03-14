@@ -1,0 +1,63 @@
+.book-detail {
+  margin-bottom: 20px;
+}
+
+.book-detail input[type="text"],
+.book-detail input[type="number"],
+.book-detail select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.book-detail button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.book-detail button:hover {
+  background-color: #0056b3;
+}
+
+.filter-input {
+  margin-right: 10px;
+}
+
+.sort-select {
+  margin-top: 10px; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.book-list {
+  margin-bottom: 20px;
+}
+
+.book-list input[type="text"],
+.book-list input[type="number"],
+.book-list select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.book-list button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.book-list button:hover {
+  background-color: #0056b3;
+}
+
+
