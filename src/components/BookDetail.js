@@ -10,7 +10,7 @@ function BookDetail() {
     const [product, setProduct] = useState(null);
 
     function updateInventoryItem(itemId, newData) {
-        return axios.put(`http://localhost:8000/api/update-inventory/${itemId}/`, newData);
+        return axios.put(`https://yejui626.pythonanywhere.com/api/update-inventory/${itemId}/`, newData);
     }
 
     
@@ -19,7 +19,7 @@ function BookDetail() {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/inventory/${productId}/`);
+                const response = await axios.get(`https://yejui626.pythonanywhere.com/api/inventory/${productId}/`);
                 setProduct(response.data);
             } catch (error) {
                 console.error('Error fetching product:', error);
@@ -45,7 +45,7 @@ function BookDetail() {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:8000/api/delete-inventory/${productId}/`);
+            await axios.delete(`https://yejui626.pythonanywhere.com/api/delete-inventory/${productId}/`);
             navigate('/inventory');
         } catch (error) {
             console.error('Error deleting product:', error);

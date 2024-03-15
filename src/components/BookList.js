@@ -37,7 +37,7 @@ function BookList() {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/inventory/');
+            const response = await axios.get('https://yejui626.pythonanywhere.com/api/inventory/');
             setProducts(response.data);
             setLoading(false);
         } catch (error) {
@@ -81,7 +81,7 @@ function BookList() {
         event.preventDefault();
         try {
             console.log('test');
-            await axios.post(`http://localhost:8000/api/add-inventory/`, newProduct);
+            await axios.post(`https://yejui626.pythonanywhere.com/api/add-inventory/`, newProduct);
             setNewProduct({
                 title: '',
                 author: '',
