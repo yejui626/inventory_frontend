@@ -1,6 +1,7 @@
 # Inventory Management System - React Frontend
 
 Welcome to the documentation for the Inventory Management System React Frontend. This documentation provides information on installing the frontend application and useful commands to work with it.
+The website associated with this backend can be accessed at [Inventory Management System Frontend](https://production-branch--lighthearted-raindrop-042335.netlify.app/).
 
 ## Table of Contents
 1. [About](#about)
